@@ -1,0 +1,16 @@
+apiVersion: kubeless.io/v1beta1
+kind: Function
+metadata:
+  name: hello
+  namespace: default
+  label:
+    created-by: kubeless
+    function: hello
+spec:
+  runtime: python2.7
+  timeout: "180"
+  handler: test.hello
+  deps: ""
+  checksum: sha256:2ef7dfec291a75ea39a61de166bfdf3bc6d5a32329b2ed94bfe5abe864f05f76
+  function-content-type: text+zip
+  function: /home/steve/kubeless/hello.zip
